@@ -1,0 +1,49 @@
+/* Animace: jen rozložení. Vzhled je z ui-kit (body.k, třídy k-*, tokeny --k-*). Panel je vlevo, vpravo je vidět figurína ve hře. */
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+.app { display: flex; flex-direction: column; height: 100%; border-right: 1px solid var(--k-line); }
+.top { display: flex; align-items: center; gap: var(--k-s3); padding: var(--k-s2) var(--k-s3); background: var(--k-surface); border-bottom: 1px solid var(--k-line); }
+.top #zavrit { margin-left: auto; }
+.title { color: var(--k-accent); font-family: var(--k-font-serif); font-size: 1.2rem; }
+.filters { display: flex; flex-wrap: wrap; gap: var(--k-s2); padding: var(--k-s2) var(--k-s3); align-items: center; }
+.filters .k-input { width: auto; }
+.filters #q { flex: 1 1 14rem; }
+.chips { display: flex; flex-wrap: wrap; gap: var(--k-s1); padding: 0 var(--k-s3) var(--k-s2); }
+.body { flex: 1; display: flex; min-height: 0; }
+.list { flex: 1; position: relative; overflow-y: auto; outline: none; }
+#rows { position: absolute; left: 0; right: 0; top: 0; }
+/* řádky mají pevnou výšku v px kvůli virtuálnímu scrollu (RH v app.js) */
+.row { position: absolute; left: 0; right: 0; height: 30px; display: flex; align-items: center; gap: var(--k-s2); padding: 0 var(--k-s3); cursor: pointer; border-left: 3px solid transparent; white-space: nowrap; }
+.row:hover { background: var(--k-surface-2); }
+.row.sel { border-left-color: var(--k-accent); background: var(--k-surface-2); }
+.row.hraje .fr::before { content: "▶ "; color: var(--k-accent); }
+.row .fr { font-family: var(--k-font-mono, monospace); font-size: 0.82rem; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 1 1 auto; }
+.row .tg { font-size: 0.72rem; color: var(--k-muted); overflow: hidden; text-overflow: ellipsis; max-width: 30%; }
+.row .pz { font-size: 0.7rem; color: var(--k-muted); flex: none; }
+.row .hl { font-size: 0.72rem; flex: none; min-width: 3.2em; text-align: right; }
+.hl .x { color: var(--k-err); }
+.hl .ok { color: var(--k-ok); }
+.detail { width: 24rem; border-left: 1px solid var(--k-line); padding: var(--k-s3); overflow-y: auto; background: var(--k-surface); }
+.detail h3 { margin: 0 0 2px; color: var(--k-accent); font-family: var(--k-font-mono, monospace); font-size: 1rem; word-break: break-all; }
+.detail h4 { margin: var(--k-s3) 0 var(--k-s1); font-size: 0.85rem; color: var(--k-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.cisla { display: grid; grid-template-columns: auto 1fr; gap: 2px var(--k-s3); font-size: 0.85rem; margin: var(--k-s2) 0; }
+.cisla dt { color: var(--k-muted); }
+.cisla dd { margin: 0; word-break: break-all; }
+.tlac { display: flex; flex-wrap: wrap; gap: var(--k-s1); margin: var(--k-s1) 0; }
+.ruka { border: 1px solid var(--k-line-soft); border-radius: var(--k-r-sm); padding: var(--k-s2); margin: var(--k-s1) 0; }
+.ruka .k-input { width: 100%; }
+.xyz { display: grid; grid-template-columns: 3.2rem repeat(4, 1fr); gap: 4px; align-items: center; margin-top: 4px; font-size: 0.78rem; }
+.xyz input { width: 100%; padding: 2px 4px; }
+.xyz span { color: var(--k-muted); }
+.hlaseni { list-style: none; padding: 0; margin: var(--k-s1) 0; font-size: 0.8rem; }
+.hlaseni li { padding: 2px 0; border-bottom: 1px solid var(--k-line-soft); }
+.kod { width: 100%; font-family: var(--k-font-mono, monospace); font-size: 0.72rem; min-height: 4.5em; resize: vertical; }
+.bottom { border-top: 1px solid var(--k-line); background: var(--k-surface); padding: var(--k-s2) var(--k-s3); display: grid; gap: var(--k-s2); }
+.ovl { display: flex; flex-wrap: wrap; gap: var(--k-s2); align-items: center; }
+.ovl .sep { flex: 1; }
+.ovl .k-input { width: auto; }
+.prave-hraje { font-family: var(--k-font-mono, monospace); font-size: 0.8rem; max-width: 40%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.prehled { position: fixed; inset: 10% 8%; z-index: 10; background: var(--k-surface); border: 1px solid var(--k-line); border-radius: var(--k-r-lg); padding: var(--k-s3); overflow: auto; box-shadow: var(--k-shadow-3); }
+.prehled table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.prehled td, .prehled th { text-align: left; padding: 3px 6px; border-bottom: 1px solid var(--k-line-soft); }
+.prehled td.k { font-family: var(--k-font-mono, monospace); cursor: pointer; }

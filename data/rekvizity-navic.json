@@ -1,0 +1,177 @@
+[
+ {
+  "name": "bow_a",
+  "model": "objects/manmade/weapons/bows/bow_a.cgf",
+  "hand": "bow"
+ },
+ {
+  "name": "bow_b",
+  "model": "objects/manmade/weapons/bows/bow_b.cgf",
+  "hand": "bow"
+ },
+ {
+  "name": "bow_c",
+  "model": "objects/manmade/weapons/bows/bow_c.cgf",
+  "hand": "bow"
+ },
+ {
+  "name": "bow_d",
+  "model": "objects/manmade/weapons/bows/bow_d.cgf",
+  "hand": "bow"
+ },
+ {
+  "name": "bow_e",
+  "model": "objects/manmade/weapons/bows/bow_e.cgf",
+  "hand": "bow"
+ },
+ {
+  "name": "cuman_bow_a",
+  "model": "objects/manmade/weapons/bows/cuman_bow_a.cgf",
+  "hand": "bow"
+ },
+ {
+  "name": "cuman_bow_b",
+  "model": "objects/manmade/weapons/bows/cuman_bow_b.cgf",
+  "hand": "bow"
+ },
+ {
+  "name": "crossbow_light_a",
+  "model": "objects/manmade/weapons/crossbows/crossbow_light_a.cdf",
+  "hand": "crossbow"
+ },
+ {
+  "name": "crossbow_medium_a",
+  "model": "objects/manmade/weapons/crossbows/crossbow_medium_a.cdf",
+  "hand": "crossbow"
+ },
+ {
+  "name": "crossbow_heavy_a",
+  "model": "objects/manmade/weapons/crossbows/crossbow_heavy_a.cdf",
+  "hand": "crossbow"
+ },
+ {
+  "name": "hand_cannon_a",
+  "model": "objects/manmade/weapons/firearms/hand_cannon_a.cgf",
+  "hand": "rifle"
+ },
+ {
+  "name": "hook_gun_a",
+  "model": "objects/manmade/weapons/firearms/hook_gun_a.cgf",
+  "hand": "rifle"
+ },
+ {
+  "name": "hook_gun_pushek",
+  "model": "objects/manmade/weapons/firearms/hook_gun_pushek.cgf",
+  "hand": "rifle"
+ },
+ {
+  "name": "book_a",
+  "model": "objects/manmade/task_specific_props/read_and_write/books/book_a.cgf",
+  "hand": "book"
+ },
+ {
+  "name": "book_b",
+  "model": "objects/manmade/task_specific_props/read_and_write/books/book_b.cgf",
+  "hand": "book"
+ },
+ {
+  "name": "book_c",
+  "model": "objects/manmade/task_specific_props/read_and_write/books/book_c.cgf",
+  "hand": "book"
+ },
+ {
+  "name": "book_alchemy",
+  "model": "objects/manmade/task_specific_props/read_and_write/books/book_alchemy.cgf",
+  "hand": "book"
+ },
+ {
+  "name": "book_alchemy_closed",
+  "model": "objects/manmade/task_specific_props/read_and_write/books/book_alchemy_closed.cgf",
+  "hand": "book"
+ },
+ {
+  "name": "whip",
+  "model": "objects/manmade/task_specific_props/animal_keeping/horse/whip.cgf",
+  "hand": "whip"
+ },
+ {
+  "name": "churn",
+  "model": "objects/manmade/task_specific_props/food_processing/milk_processing/churn.cgf",
+  "hand": "churn"
+ },
+ {
+  "name": "scuttle_a",
+  "model": "objects/manmade/task_specific_props/household/cooking_eating/scuttles/scuttle_a.cgf",
+  "hand": "scuttle"
+ },
+ {
+  "name": "flute",
+  "model": "objects/manmade/task_specific_props/entertainment/music/flute.cgf",
+  "hand": "flute"
+ },
+ {
+  "name": "quill",
+  "model": "objects/manmade/task_specific_props/read_and_write/inkwell/quill.cgf",
+  "hand": "quill"
+ },
+ {
+  "name": "whetstone",
+  "model": "objects/manmade/common_tools/whetstone.cgf",
+  "hand": "whetstone"
+ },
+ {
+  "name": "knife_eating",
+  "model": "objects/manmade/task_specific_props/household/cooking_eating/eating_tools/knife_eating.cgf",
+  "hand": "knife"
+ },
+ {
+  "name": "needle",
+  "model": "objects/manmade/task_specific_props/clothing_industry/needlework/needle.cgf",
+  "hand": "needle"
+ },
+ {
+  "name": "spindle",
+  "model": "objects/manmade/task_specific_props/clothing_industry/spinning/spindle.cgf",
+  "hand": "spindle"
+ },
+ {
+  "name": "paint_brush_a",
+  "model": "objects/manmade/task_specific_props/painting/paint_brush_a.cgf",
+  "hand": "brush"
+ },
+ {
+  "name": "ladle_a",
+  "model": "objects/manmade/task_specific_props/household/cooking_eating/ladles/ladle_a.cgf",
+  "hand": "ladle"
+ },
+ {
+  "name": "pan_a",
+  "model": "objects/manmade/task_specific_props/household/cooking_eating/pans/pan_a.cgf",
+  "hand": "pan"
+ },
+ {
+  "name": "thigh_chicken",
+  "model": "objects/manmade/food/food/thigh_chicken.cgf",
+  "hand": "food"
+ },
+ {
+  "name": "wineskin_rustic",
+  "model": "objects/manmade/food/drinks/wineskin_rustic.cgf",
+  "hand": "wineskin"
+ },
+ {
+  "name": "tongs_a",
+  "model": "objects/manmade/task_specific_props/metal_industry/smithing/tongs_a.cgf",
+  "hand": "tongs"
+ },
+ {
+  "name": "casting_tongs",
+  "model": "objects/manmade/task_specific_props/metal_industry/smelting/casting_tongs.cgf",
+  "hand": "tongs"
+ },
+ {
+  "name": "rosary",
+  "model": "objects/manmade/task_specific_props/religious/rosary.cgf",
+  "hand": "rosary"
+ }
+]

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Animace</title>
+<link rel="stylesheet" href="kit/theme.css">
+<link rel="stylesheet" href="kit/components.css">
+<link rel="stylesheet" href="style.css">
+<script src="kit/kit.js"></script>
+<script>Kit.init();</script>
+</head>
+<body class="k">
+<div class="app">
+  <header class="top">
+    <strong class="title">Animace</strong>
+    <nav class="k-tabs" role="tablist" aria-label="Na kom">
+      <button class="k-tab" role="tab" aria-selected="true" data-telo="figurina" title="Figurína v tvém oblečení, vidíš ji jen ty">Figurína</button>
+      <button class="k-tab" role="tab" aria-selected="false" data-telo="ja" title="Na tobě; během náhledu tě nikdo nevidí">Na mně</button>
+    </nav>
+    <nav class="k-tabs" role="tablist" aria-label="Pohlaví figuríny">
+      <button class="k-tab" role="tab" aria-selected="true" data-pohlavi="m">Muž</button>
+      <button class="k-tab" role="tab" aria-selected="false" data-pohlavi="f">Žena</button>
+    </nav>
+    <span id="stav" class="k-muted"></span>
+    <button id="zavrit" class="k-btn k-btn--ghost k-btn--sm" title="Zavřít (Esc)">✕</button>
+  </header>
+
+  <div class="filters">
+    <input class="k-input" id="q" type="search" placeholder="Hledat fragment, tag, rekvizitu (Ctrl+F)" autocomplete="off">
+    <select class="k-input" id="fPohlavi" title="Pro koho hra animaci má"><option value="">muž i žena</option><option value="m">má muž</option><option value="f">má žena</option></select>
+    <select class="k-input" id="fTelo" title="Celé tělo, nebo jen horní polovina (nohy volné)"><option value="">celé i horní</option><option value="cele">celé tělo</option><option value="horni">jen horní polovina</option></select>
+    <select class="k-input" id="fSmycka" title="Smyčka nebo jednorázová"><option value="">smyčky i jednorázové</option><option value="smycka">smyčky</option><option value="jednou">jednorázové</option></select>
+    <select class="k-input" id="fHlaseni" title="Podle hlášení"><option value="">všechny</option><option value="nefunguje">nahlášené ✗</option><option value="ok">ověřené ✓</option><option value="bez">neověřené</option></select>
+    <label class="k-switch" title="Animace s rekvizitou v ruce"><input id="fRekvizita" type="checkbox"><span class="k-track"></span> rekvizita</label>
+    <label class="k-switch" title="Sezení a ležení (lavice, postel)"><input id="fProstredi" type="checkbox"><span class="k-track"></span> sedí / leží</label>
+    <label class="k-switch" title="Část sekvence vstup / smyčka / výstup"><input id="fSekvence" type="checkbox"><span class="k-track"></span> sekvence</label>
+    <label class="k-switch" title="Pro dvě postavy"><input id="fDvojice" type="checkbox"><span class="k-track"></span> dvojice</label>
+  </div>
+  <div id="kat" class="chips" role="group" aria-label="Kategorie"></div>
+
+  <div class="body">
+    <div id="seznam" class="list" tabindex="0"><div id="spacer"></div><div id="rows"></div></div>
+    <aside id="detail" class="detail"><div class="k-empty"><strong>Vyber animaci.</strong> Klik ji přehraje na figuríně vpravo (vidíš ji jen ty), dvojklik ve smyčce. Tady pak nastavíš rekvizity, lavici, partnera a nahlásíš, když nefunguje.</div></aside>
+  </div>
+
+  <footer class="bottom">
+    <div class="ovl">
+      <button class="k-btn k-btn--sm" id="hrat" title="Přehrát jednou (mezerník)">▶ Jednou</button>
+      <button class="k-btn k-btn--sm" id="smycka" title="Přehrávat dokola (Enter)">⟳ Smyčka</button>
+      <button class="k-btn k-btn--ghost k-btn--sm" id="stop" title="Zastavit (S)">■ Stop</button>
+      <span id="hraje" class="k-muted prave-hraje"></span>
+      <span class="sep"></span>
+      <select class="k-input" id="obleceni" title="Oblečení figuríny"><option value="moje">moje oblečení</option><option value="vychozi">oblečení role</option><option value="zadne">bez oblečení</option></select>
+    </div>
+    <div class="ovl">
+      <div class="k-tabs zoom" role="tablist" aria-label="Záběr">
+        <button class="k-tab" data-zoom="postava" aria-selected="true">Postava</button>
+        <button class="k-tab" data-zoom="horni" aria-selected="false">Trup</button>
+        <button class="k-tab" data-zoom="ruce" aria-selected="false">Ruce</button>
+        <button class="k-tab" data-zoom="hlava" aria-selected="false">Hlava</button>
+        <button class="k-tab" data-zoom="shora" aria-selected="false">Shora</button>
+      </div>
+      <button class="k-btn k-btn--ghost k-btn--sm" id="vlevo" title="Otočit (Q)">⟲</button>
+      <button class="k-btn k-btn--ghost k-btn--sm" id="vpravo" title="Otočit (E)">⟳</button>
+      <span class="sep"></span>
+      <button class="k-btn k-btn--ghost k-btn--sm" id="prehled" title="Všechny nahlášené nefunkční animace">Nahlášené</button>
+    </div>
+    <div id="klavesy"></div>
+  </footer>
+</div>
+<script src="katalog.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

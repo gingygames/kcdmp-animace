@@ -1,0 +1,15 @@
+# Node / Dependencies
+node_modules/
+package-lock.json
+
+# Cache & Temp
+*.tmp
+*.log
+.cache/
+.DS_Store
+Thumbs.db
+
+# Data overrides
+data/hlaseni.json
+data/predvolby.json
+data/*.tmp

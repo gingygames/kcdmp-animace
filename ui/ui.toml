@@ -1,0 +1,10 @@
+api = 1
+name = "Galerie animaci"
+version = "1"
+
+[frames.animace]
+page = "index.html"
+preload = true
+z = 300
+focus = "all"
+events_out = ["animace.zadost"]
